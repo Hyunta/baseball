@@ -18,11 +18,22 @@ public class StringCalculator {
         int second = Integer.parseInt(values[2]);
         System.out.println("second = " + second);
 
-
-
-
+        int answer = calculate(first, symbol, second);
+        System.out.println("answer = " + answer);
     }
 
-
+    private static int calculate(int first, String symbol, int second) {
+        if (symbol.equals("+")) {
+            return (first + second);
+        } else if (symbol.equals("-")) {
+            return (first - second);
+        } else if (symbol.equals("*")) {
+            return (first * second);
+        } else if (symbol.equals("/")) {
+            return (first / second);
+        } else {
+            return 0;
+        }
+    }
 
 }
