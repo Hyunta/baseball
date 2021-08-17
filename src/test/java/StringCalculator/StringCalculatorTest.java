@@ -12,8 +12,6 @@ class StringCalculatorTest {
 
     @Test
     public void splitTest() {
-        String[] result = calculator.split("10 + 2");
-        Assertions.assertThat(result).containsExactly("10","+","2");
     }
 
 }

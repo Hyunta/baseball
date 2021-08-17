@@ -5,23 +5,21 @@ import java.util.Scanner;
 
 public class StringCalculator {
 
-    int add(String text) {
-        if (text.isEmpty()) {
-            return 0;
-        }
-        return Integer.parseInt(text);
-    }
-
-    String[] split(String text) {
-        return text.split(" ");
-    }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         StringCalculator cal = new StringCalculator();
+        System.out.println("수식을 입력하세요.");
+        String[] values = sc.nextLine().split(" ");
 
-        String value = sc.nextLine();
-        System.out.println(Arrays.toString(cal.split(value)));
+        int first = Integer.parseInt(values[0]);
+        System.out.println("first = " + first);
+        String symbol = values[1];
+        System.out.println("symbol = " + symbol);
+        int second = Integer.parseInt(values[2]);
+        System.out.println("second = " + second);
+
+
+
 
     }
 
