@@ -4,13 +4,7 @@ public class StringCalculator {
 
     public static void main(String[] args) {
         String[] values = Input.getStrings();
-        int result = Integer.parseInt(values[0]);
-        result = Calculator.CalculateStrings(values, result);
-
-        System.out.println("answer = " + result);
+        int result = Calculator.CalculateStrings(values);
+        System.out.println("result = " + result);
     }
-
-
-
-
 }

@@ -1,7 +1,8 @@
 package StringCalculator;
 
 public class Calculator {
-    static int calculate(int first, String symbol, int second) {
+
+    static int Calculate(int first, String symbol, int second) {
         int result = 0;
         if (symbol.equals("+")) {
             result = (first + second);
@@ -17,14 +18,16 @@ public class Calculator {
         return result;
     }
 
-    static int CalculateStrings(String[] values, int result) {
+    static int CalculateStrings(String[] values) {
+        int initValue = Integer.parseInt(values[0]);
         int i = 1;
         while (i < values.length) {
             String symbol = values[i];
             int second = Integer.parseInt(values[i+1]);
-            result = calculate(result, symbol, second);
+            initValue = Calculate(initValue, symbol, second);
             i += 2;
         }
+        int result = initValue;
         return result;
     }
 }
