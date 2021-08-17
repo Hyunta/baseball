@@ -1,4 +1,4 @@
-package NumBaseball;
+package baseball;
 
 import java.util.HashSet;
 import java.util.Scanner;
