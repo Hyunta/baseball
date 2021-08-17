@@ -9,32 +9,32 @@ public class StringCalculator {
         System.out.println("수식을 입력하세요.");
         String[] values = sc.nextLine().split(" ");
 
-        int first = Integer.parseInt(values[0]);
-        int answer = first;
-
+        int result = Integer.parseInt(values[0]);
         int i = 1;
         while (i < values.length) {
             String symbol = values[i];
             int second = Integer.parseInt(values[i+1]);
-            answer = calculate(answer, symbol, second);
+            result = calculate(result, symbol, second);
             i += 2;
         }
 
-        System.out.println("answer = " + answer);
+        System.out.println("answer = " + result);
     }
 
-    private static int calculate(int first, String symbol, int second) {
+    static int calculate(int first, String symbol, int second) {
+        int result = 0;
         if (symbol.equals("+")) {
-            return (first + second);
+            result = (first + second);
         } else if (symbol.equals("-")) {
-            return (first - second);
+            result = (first - second);
         } else if (symbol.equals("*")) {
-            return (first * second);
+            result = (first * second);
         } else if (symbol.equals("/")) {
-            return (first / second);
+            result = (first / second);
         } else {
-            return 0;
+            System.out.println("사칙연산 기호가 아닙니다");
         }
+        return result;
     }
 
 }
