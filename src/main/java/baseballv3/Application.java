@@ -16,6 +16,10 @@ public class Application {
         boolean place = judge.hasPlace(Arrays.asList(7, 8, 9), 1, 7);
         System.out.println("place = " + place);//true
 
+        Referee referee = new Referee();
+        String result = referee.compareNumbers(Arrays.asList(1, 2, 3), Arrays.asList(1, 3, 2));
+        System.out.println("result = " + result);
+
 
     }
 }
