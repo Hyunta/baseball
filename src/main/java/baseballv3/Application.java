@@ -13,6 +13,9 @@ public class Application {
         int cnt = judge.correctCount(Arrays.asList(2, 8, 9), Arrays.asList(1, 2, 3));
         System.out.println("cnt = " + cnt);
 
+        boolean place = judge.hasPlace(Arrays.asList(7, 8, 9), 1, 7);
+        System.out.println("place = " + place);//true
+
 
     }
 }

@@ -15,7 +15,7 @@ public class Judge {
         return result;
     }
 
-    public boolean hasPlace(int place, int number) {
-        return false;
+    public boolean hasPlace(List<Integer> computer, int placeIdx, int number) {
+        return computer.get(placeIdx) == number;
     }
 }
