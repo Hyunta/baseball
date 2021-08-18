@@ -7,9 +7,13 @@ import java.util.Random;
 public class NumberGenerator {
     public List<Integer> createRandomNumber() {
         List<Integer> numbers = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
+        while (numbers.size() < 3) {
             int number = new Random().nextInt(9) + 1;
-            numbers.add(number);
+            if (numbers.contains(number)) {
+                continue;
+            } else {
+                numbers.add(number);
+            }
         }
         return numbers;
     }
