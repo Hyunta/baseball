@@ -1,4 +1,4 @@
-package baseball;
+package baseballv1;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

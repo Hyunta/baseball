@@ -1,4 +1,4 @@
-package baseball;
+package baseballv1;
 
 public class ValidationUtils {
     public static final int MIN = 1;
