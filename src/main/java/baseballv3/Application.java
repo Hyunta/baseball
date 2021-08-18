@@ -1,10 +1,9 @@
 package baseballv3;
 
-import java.io.IOException;
 import java.util.*;
 
 public class Application {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         NumberGenerator numberGenerator = new NumberGenerator();
         List<Integer> computer = numberGenerator.createRandomNumber();
@@ -21,13 +20,17 @@ public class Application {
 
     }
 
-    public static List<Integer> askNumbers() throws IOException {
+    public static List<Integer> askNumbers() {
         System.out.print("숫자를 입력해 주세요 : ");
         Scanner scanner = new Scanner(System.in);
         String input = scanner.next();
 
+        return inputToList(input);
+    }
+
+    public static List<Integer> inputToList(String input) {
         List<Integer> inputNumbers = new ArrayList<>();
-        for (String number:input.split("")) {
+        for (String number: input.split("")) {
             inputNumbers.add(Integer.valueOf(number));
         }
         return inputNumbers;
