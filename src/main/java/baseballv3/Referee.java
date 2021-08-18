@@ -9,6 +9,9 @@ public class Referee {
         // 남은 수는 볼의 개수 이다.
         Judge judge = new Judge();
         int correctCount = judge.correctCount(computer, player);
+        if (correctCount == 0) {
+            return "아웃!";
+        }
 
         int strike = 0;
 
