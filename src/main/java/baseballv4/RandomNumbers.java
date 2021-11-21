@@ -2,7 +2,7 @@ package baseballv4;
 
 import utils.RandomUtils;
 
-public class Answer {
+public class RandomNumbers {
     private static int answerLength = 3;
     private int[] answer = new int[answerLength];
     private static boolean[] used = new boolean[10];
@@ -16,7 +16,7 @@ public class Answer {
     }
 
     public int[] getAnswer() {
-        return this.answer;
+        return answer;
     }
 
     private static int getUniqueNumber() {
