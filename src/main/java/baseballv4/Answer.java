@@ -2,8 +2,6 @@ package baseballv4;
 
 import utils.RandomUtils;
 
-import java.util.Arrays;
-
 public class Answer {
     private static int answerLength = 3;
     private int[] answer = new int[answerLength];
@@ -15,7 +13,10 @@ public class Answer {
             used[uniqueNumber] = true;
             answer[i] = uniqueNumber;
         }
-        System.out.println(Arrays.toString(answer));
+    }
+
+    public int[] getAnswer() {
+        return this.answer;
     }
 
     private static int getUniqueNumber() {
