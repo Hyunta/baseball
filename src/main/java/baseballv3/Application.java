@@ -7,6 +7,7 @@ public class Application {
 
         NumberGenerator numberGenerator = new NumberGenerator();
         List<Integer> computer = numberGenerator.createRandomNumber();
+        System.out.println("computer = " + computer);
 
         Referee referee = new Referee();
 
